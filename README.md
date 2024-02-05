@@ -1,1 +1,1 @@
-# java_self_study
+# java_study2
