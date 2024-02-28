@@ -1,36 +1,48 @@
-package java_24_02_26;
+package ezen;
 
-/*
-	다음 인터페이스를 구현하여 원,사각형의 넓이 및 둘레를 구하시오.
-	
-	Shape인터페이스를 Circle클래스와 Rectangle클래스에서 구현.
-	각 클래스에서 필요한 메서드를 추가적으로 구현.
-	변수 선언은 private.
-	넓이와 둘레의 값은 소수점 두번쨰자리까지만 출력.
-	출력할떄는 System.out.printf();.
-  -----------------------
-  	출력 예시) 
-  	
-  	원의 넓이는 78.54입니다.
-  	원의 둘레는 31.42입니다.
-  	사각형의 넓이는 84.70입니다.
-  	사각형의 둘레는 41.80입니다.
-  	-----------------------
-  	=>둘레나 넓이는 예시와 같을 필요는 없음
+import java.util.ArrayList;
+import java.util.List;
+
+/*Product클래스를 디자인해보자.
+멤버변수 : 일련번호(1200부터 1씩 증가 되는 값을 저장), 상품명, 제조사, 가격
+static variable : 생성된 제품 수 (count)
+
+1. 일련번호는 static count를 이용해서 상품이 생성될 때 1200부터 1씩 증가되는 값을 저장한다.
+2. 멤버변수는 private멤버로 선언한다.
+
+
+출력만되면 됨
+실행예시----------------------------------------------------------------------
+
+[출고 리스트​]
+
+1200.    새우깡      농심(주)        1900원
+1201.    빼빼로      롯데제과       2200원
+1202.    먹태깡      농심(주)        2500원 
+-------------------------------------
+
+출고 상품 : 3건
+
+
+-----------------------------------------------------------------------------------------
 */
-public class Main {
-    public static void main(String[] args) {
-    	Circle circle =new Circle(4);
-    	System.out.printf("원의 넓이는 %.2f입니다 ",circle.area());
-    	System.out.println();
-    	System.out.printf("원의 둘레는 %.2f입니다 ",circle.circumference());
-    	System.out.println();
-    	
-    	Rectangle rect = new Rectangle(2, 30);
-    	System.out.printf("사각형의 넓이는 %.2f입니다 ",rect.area());
-    	System.out.println();
-    	System.out.printf("사각형의 둘레는 %.2f입니다 ",rect.circumference());
-    	
 
-    }
+public class Main {
+
+	public static void main(String[] args) {
+	List<String> goodsList = new ArrayList<String>();
+    
+		
+		Product product = new Product("새우깡 ", "농심(주)", 1900);
+		List<Product> list = new ArrayList<>();
+		list.add(product);
+		for(int i=1200;i< 1200+list.size();i++) {
+			System.out.println(i +"\t" +list.get(i-1200).getmName()+"\t" + list.get(i-1200).getmWhere()+"\t" + list.get(i-1200).getmPrice() +"원");
+			
+		}//for end
+		
+		System.out.println("출고상품 : "+list.size()+"건 ");
+		
+	}
+
 }
