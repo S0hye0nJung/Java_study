@@ -1,7 +1,7 @@
 //문제) 2024.03.06
-//클라스 이름은 RockScissorPaper 
+//클라스 이름은 CorrectNumber 
 
-public class RockScissorPaper {
+public class CorrectNumber {
 
 	//숫자 맞추기 게임 (1-6의 숫자(정수)를 랜덤으로 한번 뽑은 다음 숫자를 입력받아서 맞추는 게임을 한다. 맞출때 까지 입력하게 하는 코드를 작성하시오 )
 		
