@@ -9,7 +9,7 @@ public class PersonMain {
 	//정보를 저장할 리스트 생성
 	List<Person> list = new ArrayList<Person>();
 	
-	public static void main(String[] args) {
+public static void main(String[] args) {
 	
 		PersonMain personmain = new PersonMain();
 		personmain.Info();
@@ -24,21 +24,18 @@ public void Info() {
 
 	//스위치문 case번호 직접 입력받기	
 		Scanner sc = new Scanner(System.in);
-		int i = sc.nextInt();
+		String i = sc.nextLine();
 		
 	//스위치문	
 		switch(i) {
-		case 1: addList(); break;	
-		case 2: deleteInfo();break;
-		case 3: showList();break;
+		case "1": addList(); break;	
+		case "2": deleteInfo();break;
+		case "3": showList();break;
 			
 		default: System.out.println("종료");
 			
 			}
 }
-
-
-
 
 
 
@@ -54,10 +51,12 @@ public void addList() {
 	//나이 입력받기
 		System.out.print("나이를 입력하세요");
 		int age = sc.nextInt();
+	
 	//전화번호 입력받기
 		Scanner t = new Scanner(System.in);
 		System.out.print("전화번호를 입력하세요");
 		String tel = t.nextLine();
+	
 	//객체 생성
 		Person person = new Person(name, age, tel);
 	
@@ -99,10 +98,13 @@ public void deleteInfo() {
 public void showList() {
 	//리스트에 있는거 다 출력하기
 	System.out.println("=========== 전체 정보 ===========");
-	for(int i =0; i< list.size();i++) {
-		System.out.println(list.toString());
+	
+	for(int i =0; i< list.size();i++) { 
+		System.out.println("이름 : " + list.get(i).getName() +"/ 나이 : " +list.get(i).getAge() +"/ 전화번호 : " +list.get(i).getTel());
 	
 	}
+		
+	
 	//보기 좋게 하기 위해서 간격띄우기
 	System.out.println("\n");
 	
