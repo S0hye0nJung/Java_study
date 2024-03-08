@@ -1,0 +1,47 @@
+public class Muck {
+
+		public static void main(String[] args) {
+			System.out.println("묵 찌 빠 !");
+			System.out.print("나 -> ");
+     
+      //내가 묵찌빠 뽑기
+			Scanner sc = new Scanner(System.in);
+			String a = sc.nextLine();
+
+		
+		
+			//묵  : 0, 찌  :1, 빠 : 2으로 가정
+     //컴퓨터가 묵찌빠 뽑기
+     	int s = (int)(Math.random()*3);
+			String computer = "";
+			if(s==0) {
+				computer="묵";
+			}else if(s==1) {
+				computer="찌";
+			}else if(s==2) {
+				computer="빠";
+			}
+
+    //이겼는지, 비겼는지, 졌는지 알아보는 코드
+				switch(a) {
+				case "묵" : System.out.println("상대 -> " + computer);
+							if(s==0) {System.out.println("비겼습니다 ");
+								}else if(s==1){System.out.println("이겼습니다 ");
+									}else if(s==2){System.out.println("졌습니다 ");
+										}break;
+				case "찌" : System.out.println("상대 -> " + computer);
+							if(s==1) {System.out.println("비겼습니다 ");
+								}else if(s==2){System.out.println("이겼습니다 ");
+									}else if(s==0) {System.out.println("졌습니다 ");
+										}break;
+				case "빠" :  System.out.println("상대 -> " + computer);
+							if(s==2) {System.out.println("비겼습니다 ");
+								}else if(s==0){System.out.println("이겼습니다 ");
+									}else if(s==1){System.out.println("졌습니다 ");
+										}break;
+				default :
+					System.out.println("입력오류입니다.");
+			}//end switch 
+			
+		}//main end
+		}
