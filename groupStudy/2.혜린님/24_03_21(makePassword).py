@@ -1,6 +1,24 @@
 # [간단한 비밀번호 생성 프로그램]
 # chars문자열에서 random으로 추출해서 비밀번호 생성
 # 몇 개를 추출할 것인지는 입력받을 길이로 결정
+# ----------------------------------
+# 출력 예시 - 길이가 10인 비밀번호를 8개 생성
+
+# Welcome To Password Generator
+# 생성할 비밀번호의 갯수 :  8
+# 생성할 비밀번호의 길이 :  10
+
+# --Here are your passwords--
+# XnG,s?Ax2r
+# v06hOvx(st
+# 6)@ll%mKMm
+# ^HCUV&w1gs
+# v6r5QbDQBc
+# Y39BJ5SJin
+# ^JI9yb.R.w
+# LaQ.rFt5G6
+
+####################################### 문제 풀이 #########################################################
 
 # 여기에 random 모듈 import하기
 import random
@@ -24,27 +42,7 @@ def mkPassword():
             str+= j
     print(str)
             
-            
-        
 
-    
 for i in range(number):
     mkPassword()
     
-
-# ----------------------------------
-# 출력 예시 - 길이가 10인 비밀번호를 8개 생성
-
-# Welcome To Password Generator
-# 생성할 비밀번호의 갯수 :  8
-# 생성할 비밀번호의 길이 :  10
-
-# --Here are your passwords--
-# XnG,s?Ax2r
-# v06hOvx(st
-# 6)@ll%mKMm
-# ^HCUV&w1gs
-# v6r5QbDQBc
-# Y39BJ5SJin
-# ^JI9yb.R.w
-# LaQ.rFt5G6
