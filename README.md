@@ -1,1 +1,1 @@
-# java_study2
+# Study
