@@ -7,9 +7,9 @@ import pandas as pd
 datafile = pd.read_csv('./data/excel/한국언론진흥재단_뉴스빅데이터_연도 및 과목별 언론의 수능난이도 평가_20221231.csv', encoding='utf-8', delimiter=',')
 
 
-# 데이터 확인( 주석 표시 지우시고 확인 하시면 됩니다.)
-# display(datafile)
-# print(type(datafile))
+# 데이터 확인
+display(datafile)
+print(type(datafile))
 
 # 국어(korean)/수학(math)/ 영어(english) 과목 별로 따로 데이터를 저장하기
 korean = 
