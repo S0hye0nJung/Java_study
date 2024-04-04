@@ -1,7 +1,15 @@
 # 아래에 링크에 접속하셔서 csv파일을 다운로드한 후, 문제를 풀어주세요:)
 # 해당 데이터 다운 받기 : https://www.data.go.kr/data/15126554/fileData.do
-
+import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+# 한글 깨짐처리
+from matplotlib import rc, font_manager
+font_name = font_manager.FontProperties(fname ='./D2Coding-Ver1.3.2-20180524.ttf')\
+                .get_name()
+rc('font', family = font_name)
+rc('axes', unicode_minus=False) # 음수값처리
+
 
 # 데이터 불러오기(수업시간에 진행하는 것처럼 data파일 안의 excel파일에 다운로드를 하여 사용해주세요.)
 datafile = pd.read_csv('./data/excel/한국언론진흥재단_뉴스빅데이터_연도 및 과목별 언론의 수능난이도 평가_20221231.csv', encoding='utf-8', delimiter=',')
