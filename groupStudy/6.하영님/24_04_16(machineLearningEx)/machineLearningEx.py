@@ -66,13 +66,21 @@ print(f'피어슨값 = {A.pvalue}')
 #### 1.) 다중분류
 import mglearn 
 from sklearn.datasets import make_blobs
-import matplotlib.pyplot as plt
+* mglearn 모듈과 scikit-learn의 make_blobs 함수를 임포트, 클러스터링 알고리즘의 실험이나 군집 데이터 시각화 
+* ​make_blobs : scikit-learn의 datasets 모듈에 포함된 함수 -> 가상의 데이터셋을 생성
+ - make_blobs 함수가 받는 인자
+    n_samples: 생성할 전체 데이터 포인트 수
+    n_features: 특성(feature) 수, 즉 차원
+    centers: 클러스터 중심의 수
+    ...
+
 X, y = make_blobs(n_samples=100, random_state=42)
 mglearn.discrete_scatter(X[:,0], X[:,1], y)
-plt.xlabel('n_features')
-plt.ylabel('n_samples')
-plt.legend(['1st Feature', '2nd  Feature', '3rd Feature'])
+plt.xlabel('A_LINE')
+plt.ylabel('B_LINE')
+plt.legend(['a_side', 'b_side', 'c_side'])
 plt.show()
+
 
 
 #### 2.) 이미지 데이터셋 : 올리베티 얼굴 이미지
